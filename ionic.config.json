@@ -1,0 +1,7 @@
+{
+  "name": "widgetcount",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
