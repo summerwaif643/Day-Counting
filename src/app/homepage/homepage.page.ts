@@ -16,19 +16,23 @@ export class HomepagePage implements OnInit {
   date: string;
 
   cancel() {
+    this.name = "";
+    this.date = ""; 
     this.modal.dismiss(null, 'cancel');
   }
 
   confirm() {
-    this.modal.dismiss(this.name, 'confirm');
+    // do what you need 
     console.log(this.name, this.date)
+
+    // Dismiss procedure
+    this.name = "";
+    this.date = ""; 
+    this.modal.dismiss(null, 'confirm');
   }
 
   onWillDismiss(event: Event) {
-    const ev = event as CustomEvent<OverlayEventDetail<string>>;
-    if (ev.detail.role === 'confirm') {
-      this.message = `Hello, ${ev.detail.data}!`;
-    }
+    
   }
 
   constructor() { }

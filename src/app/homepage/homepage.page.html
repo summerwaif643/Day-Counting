@@ -34,13 +34,14 @@
     <ion-content class="ion-padding">
       <ion-item>
         <ion-label position="stacked">Enter event name</ion-label>
-        <ion-input type="text" placeholder="Event name" [(ngModel)]="name"></ion-input>
+        <ion-input type="text" placeholder="Event name" [(ngModel)]="name" required></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Enter day</ion-label>
         <!-- Date picker https://ionicframework.com/docs/api/datetime -->
-        <ion-input id="date" value="{{ date | date: 'dd MMM yyyy' }}">
+        <ion-input id="date" value="{{ date | date: 'dd MMM yyyy' }}" placeholder="Date" required> 
+          <ion-icon slot="end" name="calendar-number-outline" ></ion-icon>
         </ion-input>
         <ion-popover trigger="date" size="cover">
         <ng-template>
@@ -50,6 +51,7 @@
             [showDefaultButtons]="true"
             [(ngModel)]="date"
             ></ion-datetime>
+
         </ng-template>
         </ion-popover>
       </ion-item>
