@@ -29,6 +29,8 @@ export class HomepagePage implements OnInit {
     this.name = "";
     this.date = ""; 
     this.modal.dismiss(null, 'confirm');
+
+     
   }
 
   onWillDismiss(event: Event) {
