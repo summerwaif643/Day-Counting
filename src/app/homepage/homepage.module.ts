@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { HomepagePageRoutingModule } from './homepage-routing.module';
 
 import { HomepagePage } from './homepage.page';
+import { EventComponent } from '../event/event.component';
+import { EventItemComponent } from '../event-item/event-item.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomepagePageRoutingModule
+    HomepagePageRoutingModule,
   ],
-  declarations: [HomepagePage]
+  declarations: [HomepagePage,
+                    EventComponent,
+                    EventItemComponent]
 })
 export class HomepagePageModule {}
